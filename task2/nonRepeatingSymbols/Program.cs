@@ -13,7 +13,7 @@ namespace nonRepeatingSymbols
 
             else
             {
-                Console.WriteLine(symbolsCounter(args[0].ToLower()));
+                Console.WriteLine(SymbolsCounter(args[0].ToLower()));
             }
 
             Console.ReadKey();
