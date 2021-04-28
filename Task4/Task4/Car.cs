@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task4
 {
-    class Car : Vehicle
+    class Car : Vehicle, IMovable
     {
         public string GearBox { get; set; } //тип коробки передач
 
@@ -21,6 +21,11 @@ namespace Task4
                                 $" lifting capacity: {LiftingCapacity}kg, max speed: {MaxSpeed}kmph, tank volume: {TankVolume}l," +
                                 $" fuel consumption: {FuelConsumption}lphk, gearbox: {GearBox}";
             return logString;            
+        }
+
+        public override void Move()
+        {
+            Console.Write("Car is moving");
         }
     }
 }

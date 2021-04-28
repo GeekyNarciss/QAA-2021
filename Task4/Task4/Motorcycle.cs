@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task4
 {
-    class Motorcycle : Vehicle
+    class Motorcycle : Vehicle, IMovable
     {
         public bool HasAWheelChair { get; set; } //наличие коляски
 
@@ -18,6 +18,11 @@ namespace Task4
         public override string GetFullInfo()
         {
             return base.GetFullInfo() + $", has a wheelchair?: {HasAWheelChair}";
+        }
+
+        public override void Move()
+        {
+            Console.Write("Motorcycle is moving");
         }
     }
 }

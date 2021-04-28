@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task4
 {
-    class Bus : Vehicle
+    class Bus : Vehicle, IMovable
     {
         public bool IsABendyBus { get; set; } //автобус-гармошка?
 
@@ -18,6 +18,11 @@ namespace Task4
         public override string GetFullInfo()
         {
             return base.GetFullInfo() + $", is a bendybus?: {IsABendyBus}";
+        }
+
+        public override void Move()
+        {
+            Console.Write("Bus is moving");
         }
     }
 }

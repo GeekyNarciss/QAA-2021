@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task4
 {
-    class Tank : Vehicle
+    class Tank : Vehicle, IMovable
     {
         public bool HasAGun { get; set; } //наличие оружия
         public string WheelsType { get; set; } //тип колес
@@ -20,6 +20,11 @@ namespace Task4
         public override string GetFullInfo()
         {
             return base.GetFullInfo() + $", has a weapon?: {HasAGun}, wheels type: {WheelsType}";
+        }
+
+        public override void Move()
+        {
+            Console.Write("Tank is moving");
         }
     }
 }

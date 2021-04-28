@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task4
 {
-    abstract class Vehicle
+    abstract class Vehicle: IMovable
     {
         /// <summary>
         /// тип тс
@@ -64,5 +64,7 @@ namespace Task4
                                  $" fuel consumption: {FuelConsumption}lphk";           
             return logString;
         }
+
+        public abstract void Move(); 
     }
 }

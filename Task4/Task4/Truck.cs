@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task4
 {
-    class Truck : Vehicle
+    class Truck: Vehicle, IMovable
     {
         public bool HasATowHitch { get; set; } //наличие прицепного устройства
 
@@ -18,6 +18,11 @@ namespace Task4
         public override string GetFullInfo()
         {
             return base.GetFullInfo() + $", has a tow hitch: {HasATowHitch}";
+        }
+
+        public override void Move()
+        {
+            Console.Write("Truck is moving");
         }
     }
 }
