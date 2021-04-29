@@ -6,22 +6,27 @@ namespace task5
 {
     class DiagonalMatrix : Matrix
     {
-        public int[,] diagonalMatrixArray = new int[10, 10];
-        public DiagonalMatrix(int width, int height) : base(width, height) { }
-
-        public void Entranse()
+        public DiagonalMatrix(int size) : base(size) 
         {
-            if (N == M)
-            {
-                for (int i = 0; i < N; i+=N)
-                {
-                    for (int j = 0; j < M; j+=M)
-                    {
+            MatrixArray = new int[size];
+        }
 
-                    }
+        public override int this[int index1, int index2]
+        {
+            get
+            {
+                if (index1 == index2)
+                    return MatrixArray[index1];
+                else return 0;
+            }
+
+            set
+            {
+                if (index1 == index2)
+                {
+                    MatrixArray[index1] = value;
                 }
             }
         }
-        
     }
 }
