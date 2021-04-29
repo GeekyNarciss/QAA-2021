@@ -5,10 +5,10 @@ namespace task5
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
             try
-            {
-                int size = 3;
+            {              
+                int size = 0;
 
                 Matrix matrix1 = new Matrix(size);
                 matrix1.Entrance();

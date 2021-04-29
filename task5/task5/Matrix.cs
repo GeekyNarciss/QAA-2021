@@ -4,9 +4,19 @@ namespace task5
 {
     public class Matrix
     {
+        /// <summary>
+        /// size for matrix
+        /// </summary>
         public int Size { get; private set; } = 0;
+        /// <summary>
+        /// matrix array
+        /// </summary>
         public int[] MatrixArray;
                
+        /// <summary>
+        /// made matrix filled 0
+        /// </summary>
+        /// <param name="size"></param>
         public Matrix(int size)
         {
             Size = size;
@@ -17,7 +27,12 @@ namespace task5
                 MatrixArray[i] = 0;
             }
         }
-
+        /// <summary>
+        /// this definition
+        /// </summary>
+        /// <param name="index1"></param>
+        /// <param name="index2"></param>
+        /// <returns></returns>
         public virtual int this[int index1, int index2]
         {
             get
@@ -30,6 +45,9 @@ namespace task5
             }
         }
 
+        /// <summary>
+        /// for random filling
+        /// </summary>
         public void Entrance()
         {
             Random rand = new Random();
