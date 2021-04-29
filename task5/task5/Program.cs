@@ -6,11 +6,30 @@ namespace task5
     {
         static void Main(string[] args)
         {
-            Matrix matrix1 = new Matrix(3);
-            matrix1.Entrance();
+            try
+            {
+                int size = 3;
 
-            DiagonalMatrix matrix2 = new DiagonalMatrix(3);
-            matrix2.Entrance();
+                Matrix matrix1 = new Matrix(size);
+                matrix1.Entrance();
+                Console.WriteLine();
+
+                DiagonalMatrix matrix2 = new DiagonalMatrix(size);
+                matrix2.Entrance();
+                Console.WriteLine();
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

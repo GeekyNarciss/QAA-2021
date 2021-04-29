@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace task5
 {
@@ -26,7 +24,6 @@ namespace task5
             {
                 return MatrixArray[index1 * Size + index2];
             }
-
             set
             {
                 MatrixArray[index1 * Size + index2] = value;

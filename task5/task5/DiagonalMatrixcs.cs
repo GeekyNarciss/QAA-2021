@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace task5
+﻿namespace task5
 {
     class DiagonalMatrix : Matrix
     {
@@ -19,7 +15,6 @@ namespace task5
                     return MatrixArray[index1];
                 else return 0;
             }
-
             set
             {
                 if (index1 == index2)
