@@ -36,12 +36,12 @@ namespace task6
             return S;
         }
 
-        //public virtual double Degrees()
-        //{
-        //    dA= Math.Acos(Math.Pow(B, 2) + Math.Pow(C, 2) - Math.Pow(A, 2)) / (2 * B * C);
-        //    dB = Math.Acos(Math.Pow(A, 2) + Math.Pow(C, 2) - Math.Pow(B, 2)) / (2 * A * C);
-        //    dC = Math.Acos(Math.Pow(B, 2) + Math.Pow(A, 2) - Math.Pow(C, 2)) / (2 * B * A);
-        //    return (dA, dB, dC);
-        //}
+        public virtual string Degrees()
+        {
+            dA = Math.Acos(Math.Pow(B, 2) + Math.Pow(C, 2) - Math.Pow(A, 2)) / (2 * B * C);
+            dB = Math.Acos(Math.Pow(A, 2) + Math.Pow(C, 2) - Math.Pow(B, 2)) / (2 * A * C);
+            dC = Math.Acos(Math.Pow(B, 2) + Math.Pow(A, 2) - Math.Pow(C, 2)) / (2 * B * A);
+            return ($"{dA}, {dB}, {dC}");
+        }
     }
 }
